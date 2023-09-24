@@ -1,3 +1,5 @@
+import addAvatar from '../img/addAvatar.png'
+
 
 const Register = () => {
     return (
@@ -9,7 +11,10 @@ const Register = () => {
                     <input type="text" placeholder="Display Name" />
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <label htmlFor="file">Import Avatar</label>
+                    <label htmlFor="file">
+                        <img src={addAvatar} alt="add image" />
+                        <span>Add an avatar</span>
+                    </label>
                     <input style={{display:'none'}} type="file" id="file"/>
                     <button type="submit">Sign Up</button>
                 </form>
