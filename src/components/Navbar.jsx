@@ -1,7 +1,14 @@
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div className="navbar">
+        <span className="logo">Lee Chat</span>
+        <div className="user">
+            <img src="" alt="" />
+            <span>Ali</span>
+            <button>Logout</button>
+        </div>
+    </div>
   )
 }
 

@@ -1,18 +1,16 @@
 
-const Search = () => {
+const Chats = () => {
     return (
-        <div className="search">
-            <div className="searchForm">
-                <input type="text" placeholder="Find a user"/>
-            </div>
+        <div className='chats'>
             <div className="userChat">
                 <img src="data:image/jpeg;base64,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" alt=" " />
                 <div className="userChatInfo">
                     <span>Jane</span>
+                    <p>hello</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Search
+export default Chats
