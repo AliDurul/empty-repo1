@@ -1,15 +1,18 @@
+import { useAuthContext } from "../context/AuthContext"
 
 const Navbar = () => {
-  return (
-    <div className="navbar">
-        <span className="logo">Lee Chat</span>
-        <div className="user">
-            <img src="" alt="" />
-            <span>Ali</span>
-            <button>Logout</button>
+    const { logout, currentUser } = useAuthContext()
+    console.log(currentUser);
+    return (
+        <div className="navbar bg-neutral text-neutral-content">
+            <div className=" containerWrap flex justify-between">
+                <a className="btn btn-ghost normal-case text-xl">LeeChat</a>
+                {
+                    currentUser &&  <button onClick={logout}>Logout</button> 
+                }
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Navbar
